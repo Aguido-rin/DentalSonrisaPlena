@@ -1,7 +1,7 @@
 package org.model.factory;
 
-import model.AreaLaboral;
-import model.Empleado;
+import org.model.enums.AreaLaboral;
+import org.model.Empleado;
 
 import java.math.BigDecimal;
 

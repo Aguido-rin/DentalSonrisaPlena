@@ -1,8 +1,7 @@
-package org.model.factory;
+package org.model;
 
 import jakarta.persistence.*;
 import lombok.*;
-import org.model.Factura;
 
 
 @Entity

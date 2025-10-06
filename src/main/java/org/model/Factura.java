@@ -17,14 +17,18 @@ public class Factura {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @ManyToOne(optional = false)
-    private Paciente paciente;
+    @Column(name = "id_factura")
+    private Long idFactura;
+
     private LocalDateTime fechaEmision;
-    private BigDecimal montoBruto;
-    private BigDecimal montoDescuentos;
-    private BigDecimal montoNeto;
-    private String detalle;
+    private BigDecimal montoTotal;
+    private String metodoPago;
+
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "id_paciente")
+    private Paciente paciente;
+
+    @OneToMany(mappedBy = "factura", cascade = CascadeType.ALL, orphanRemoval = true)
     private List<DetalleFactura> detalles;
 
 }

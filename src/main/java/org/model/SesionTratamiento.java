@@ -16,14 +16,28 @@ public class SesionTratamiento {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    @ManyToOne(optional = false)
-    private Tratamiento tratamiento;
-    @ManyToOne(optional = false)
+    @Column(name = "id_sesion")
+    private Long idSesion;
+
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_plan", nullable = false)
+    private PlanTratamiento planTratamiento;
+
+    @ManyToOne(optional = false, fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_paciente", nullable = false)
     private Paciente paciente;
-    @ManyToOne
-    private Empleado odontologo;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "id_odontologo")
+    private Odontologo odontologo;
+
+    @Column(name = "fecha_hora", nullable = false)
     private LocalDateTime fechaHora;
-    private Boolean realizada;
+
+    @Column(name = "descripcion_procedimiento", columnDefinition = "TEXT")
+    private String descripcionProcedimiento;
+
+    @Column(nullable = false)
+    private Boolean realizada = false;
 
 }

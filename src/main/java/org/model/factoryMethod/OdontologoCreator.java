@@ -1,13 +1,12 @@
-package org.model.factory;
+package org.model.factoryMethod;
 
 import org.model.enums.AreaLaboral;
 import org.model.Empleado;
 
 import java.math.BigDecimal;
 
-public class OdontologoCreator extends  EmpleadoCreator{
+public class OdontologoCreator {
 
-    @Override
     public Empleado create(String codigo, String nombres) {
         return Empleado.builder()
                 .codigo(codigo)

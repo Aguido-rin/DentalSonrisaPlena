@@ -10,14 +10,23 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-
 public class Usuario {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
-    private String nombres;
-    private String correo;
-    private String contraseña;
-    private String rol; //Si es ADMIN, ODONTOLOGO, RECEPCIONISTA
+    @Column(name = "id_usuario")
+    private Long idUsuario;
+
+    private String nombreUsuario;
+    private String contrasena;
+    private String rol;
+
+    @OneToOne
+    @JoinColumn(name = "id_odontologo")
+    private Odontologo odontologo;
+
+    @OneToOne
+    @JoinColumn(name = "id_empleado")
+    private Empleado empleado;
+
 }

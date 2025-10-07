@@ -1,7 +1,7 @@
-package org.facade;
+package org.model.facade;
 
-import org.adapter.DigitalSigner;
-import org.adapter.ReminderNotifier;
+import org.model.adapter.DigitalSigner;
+import org.model.adapter.ReminderNotifier;
 import org.model.*;
 import org.model.factory.CitaProgramadaCreator;
 import org.repository.*;

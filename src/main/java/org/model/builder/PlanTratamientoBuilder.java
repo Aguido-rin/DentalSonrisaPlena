@@ -1,4 +1,4 @@
-package org.builder;
+package org.model.builder;
 
 import org.model.Diagnostico;
 import org.model.PlanTratamiento;

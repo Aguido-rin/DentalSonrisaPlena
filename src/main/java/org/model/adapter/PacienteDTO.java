@@ -1,4 +1,4 @@
-package org.adapter;
+package org.model.adapter;
 
 public class PacienteDTO {
     public Long id;

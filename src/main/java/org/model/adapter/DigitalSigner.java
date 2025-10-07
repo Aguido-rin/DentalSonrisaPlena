@@ -1,4 +1,4 @@
-package org.adapter;
+package org.model.adapter;
 
 import org.model.PlanTratamiento;
 import org.model.Paciente;

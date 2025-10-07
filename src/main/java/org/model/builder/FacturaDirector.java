@@ -1,4 +1,4 @@
-package org.builder;
+package org.model.builder;
 
 import org.model.DetalleFactura;
 import org.model.Factura;
@@ -8,7 +8,7 @@ import java.util.List;
 
 public class FacturaDirector {
     public Factura facturaBasica(Paciente p, String metodoPago, List<DetalleFactura> detalles) {
-        FacturaBuilder b = new FacturaBuilder()
+        org.model.builder.FacturaBuilder.FacturaBuilder b = new FacturaBuilder.FacturaBuilder()
                 .paraPaciente(p)
                 .metodoPago(metodoPago);
         detalles.forEach(b::agregarDetalle);

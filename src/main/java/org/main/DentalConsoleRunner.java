@@ -19,6 +19,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 import java.util.ArrayList;
+import org.model.factory.ClinicaExpressFactory;
 
 @Component
 public class DentalConsoleRunner implements CommandLineRunner {

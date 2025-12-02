@@ -13,9 +13,9 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import org.main.DentalSonrisaPlenaApplication;
+import org.model.abstractFactory.ClinicaAbstractFactory;
 import org.model.command.ConfirmarCitaCommand;
 import org.model.facade.SGCDFacade;
-import org.model.factory.ClinicaAbstractFactory;
 import org.model.factory.ClinicaExpressFactory;
 
 /**

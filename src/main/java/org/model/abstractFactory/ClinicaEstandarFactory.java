@@ -1,4 +1,4 @@
-package org.model.patterns.abstractfactory;
+package org.model.abstractFactory;
 
 import org.model.*;
 

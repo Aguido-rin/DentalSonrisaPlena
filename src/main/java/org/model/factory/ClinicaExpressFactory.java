@@ -4,6 +4,7 @@ import org.model.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import org.model.abstractFactory.ClinicaAbstractFactory;
 
 public class ClinicaExpressFactory implements ClinicaAbstractFactory {
     @Override

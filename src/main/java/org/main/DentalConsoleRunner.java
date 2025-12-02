@@ -6,8 +6,8 @@ import org.model.Observer.*;
 import org.model.State.CitaContext;
 import org.model.State.CitaAgendada;
 import org.model.command.*;
-import org.model.patterns.facade.SGCDFacade;
-import org.model.patterns.abstractfactory.*;
+import org.model.facade.SGCDFacade;
+import org.model.abstractFactory.*;
 import org.model.proxy.HistorialMedicoProxy;
 import org.repository.*;
 import org.springframework.boot.CommandLineRunner;
@@ -131,7 +131,8 @@ public class DentalConsoleRunner implements CommandLineRunner {
 
         // Abstract Factory
         System.out.println("> [Abstract Factory] Creando insumos 'Express'...");
-        ClinicaAbstractFactory fabricaExpress = new ClinicaExpressFactory();
+        ClinicaAbstractFactory fabricaExpress;
+        fabricaExpress = new ClinicaExpressFactory();
         Radiografia radioExpress = fabricaExpress.crearRadiografia(p2, tecnicoRadio, "PERIAPICAL", "/tmp/img.jpg");
         System.out.println("   Radiografía Express creada: " + radioExpress.getTipo());
 

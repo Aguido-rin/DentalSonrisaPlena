@@ -1,25 +1,22 @@
 package org.view;
 
 import org.model.*;
-import org.model.patterns.facade.SGCDFacade;
-import org.model.patterns.abstractfactory.*;
 import org.model.proxy.HistorialMedicoProxy;
-import org.model.Bridge.*;
 import org.repository.*;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.main.DentalSonrisaPlenaApplication;
 
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.List;
 import org.main.DentalSonrisaPlenaApplication;
 import org.model.command.ConfirmarCitaCommand;
+import org.model.facade.SGCDFacade;
+import org.model.factory.ClinicaAbstractFactory;
+import org.model.factory.ClinicaExpressFactory;
 
 /**
  * Interfaz Gráfica Principal para Dental Sonrisa Plena.

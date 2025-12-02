@@ -4,7 +4,7 @@ import org.model.Cita;
 import org.model.Paciente;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("whatsappReminderPattern")
 public class WhatsAppReminderAdapter implements ReminderNotifier {
     @Override
     public void sendRecordatorioCita(Cita cita, Paciente paciente) {

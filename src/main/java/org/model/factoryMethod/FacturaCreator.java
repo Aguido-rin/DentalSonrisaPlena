@@ -9,11 +9,10 @@ import java.util.List;
 
 public class FacturaCreator {
 
-    public Factura generarFactura(Paciente paciente, List<DetalleFactura> detalles, String detalleTexto) {
+    public Factura generarFactura(Paciente paciente, List<DetalleFactura> detalles) {
         Factura factura = Factura.builder()
                 .paciente(paciente)
                 .fechaEmision(LocalDateTime.now())
-                .detalle(detalleTexto)
                 .detalles(detalles)
                 .build();
         return factura;

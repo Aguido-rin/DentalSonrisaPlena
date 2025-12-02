@@ -5,7 +5,7 @@ import org.model.Paciente;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Component;
 
-@Component
+@Component("smsReminderPattern")
 @Primary
 public class SmsReminderAdapter implements ReminderNotifier {
     @Override
